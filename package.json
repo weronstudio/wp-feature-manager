@@ -1,0 +1,36 @@
+{
+  "name": "wp-feature-manager",
+  "description": "Centralized feature management for WordPress themes, utilized by Weron.",
+  "version": "1.0.0",
+  "author": "Weron <hello@weron.studio>",
+  "repository": "https://github.com/weronstudio/wp-feature-manager",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "prettier:php": "prettier '**/*.php' --write"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.22.2",
+    "@weron/eslint-config": "^1.0.5",
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0"
+  },
+  "eslintConfig": {
+    "extends": "@weron/eslint-config/vanilla"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.php",
+        "options": {
+          "parser": "php",
+          "plugins": [
+            "@prettier/plugin-php"
+          ],
+          "braceStyle": "1tbs",
+          "phpVersion": "8.1"
+        }
+      }
+    ]
+  }
+}
